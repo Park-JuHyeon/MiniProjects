@@ -54,7 +54,7 @@
       <property name="title">
        <string>뉴스 검색</string>
       </property>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -98,7 +98,7 @@
    </property>
    <layout class="QVBoxLayout" name="resultLayout">
     <item>
-     <widget class="QListView" name="lsvResult"/>
+     <widget class="QTableWidget" name="tblResult"/>
     </item>
    </layout>
   </widget>
