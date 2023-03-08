@@ -14,7 +14,7 @@
 ![네이버뉴스앱](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/news.png)
 -->
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/news.png" width = "780" />
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/news2.png" width = "780" />
 
 ## DB연동 GUI 개발 학습
 
