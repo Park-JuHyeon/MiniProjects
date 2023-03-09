@@ -22,7 +22,7 @@
   - PyQt5 / Qt Designer
   - Urllib.request.urlopen 이미지 다운로드 사용 *
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Navermovie.png" width = "780" />
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Navermovie.png" width = "850" />
 
 
 ## DB연동 GUI 개발 학습
