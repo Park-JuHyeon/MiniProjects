@@ -16,6 +16,15 @@
 
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/news2.png" width = "780" />
 
+- 네이버 API 영화검색 앱 만들기
+  - Python 3.11.2
+  - Naver OpenAPI
+  - PyQt5 / Qt Designer
+  - Urllib.request.urlopen 이미지 다운로드 사용 *
+
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Navermovie.png" width = "780" />
+
+
 ## DB연동 GUI 개발 학습
 
 ## 미니프로젝트 실습
