@@ -25,5 +25,16 @@
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Navermovie.png" width = "900" />
 
 ## DB연동 GUI 개발 학습
+- 주소록 프로그램 만들기
+  - Python 3.11.2
+  - MySQL 8.0 연동
+  - pymySQL 모듈사용
+  - PyQt5 / Qt Designer
+
+![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png)
+
+![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR1.png)
+
+  
 
 ## 미니프로젝트 실습
