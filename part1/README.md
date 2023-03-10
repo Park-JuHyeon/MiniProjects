@@ -24,7 +24,6 @@
 
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Navermovie.png" width = "900" />
 
-
 ## DB연동 GUI 개발 학습
 
 ## 미니프로젝트 실습
