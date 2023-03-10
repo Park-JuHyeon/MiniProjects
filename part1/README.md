@@ -31,7 +31,8 @@
   - pymySQL 모듈사용
   - PyQt5 / Qt Designer
 
-![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png)
+<!-- ![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png) -->
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png" width = "500" />
 
 ![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR1.png)
 
