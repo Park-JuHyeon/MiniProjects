@@ -33,10 +33,7 @@
 
 <!-- ![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png) -->
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png" width = "450" />
-
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR.png" width = "450" />  <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR1.png" width = "450" />
-
 
 <!-- ![주소록앱1](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR1.png) -->
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR_DEL.png" width = "450" />  <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR_DEL1.png" width = "450" />
