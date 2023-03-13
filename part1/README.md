@@ -40,5 +40,22 @@
 
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ProjectADDR_DEL2.png" width = "450" />
   
+## 파이썬 관련 추가학습
+- QR코드 생성 앱
+  - qrcode 모듈
+  - PyQt
+
+![QR코드 앱]
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/QRcodeapp.png" width = "450" />
+
+
+- 컴퓨터 정보 출력 앱
+  - psutil 모듈
+  - socket 모듈
+  - requests 모듈 
+  - PyQt
+
+![컴퓨터정보 앱] 
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/comInfo.png" width = "450" />
 
 ## 미니프로젝트 실습
