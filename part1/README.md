@@ -46,6 +46,7 @@
   - PyQt
 
 ![QR코드 앱]
+
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/QRcodeapp.png" width = "450" />
 
 
@@ -56,6 +57,7 @@
   - PyQt
 
 ![컴퓨터정보 앱] 
+
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/comInfo.png" width = "450" />
 
 ## 미니프로젝트 실습
