@@ -7,20 +7,25 @@
     <x>0</x>
     <y>0</y>
     <width>250</width>
-    <height>250</height>
+    <height>350</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>250</width>
-    <height>250</height>
+    <height>350</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>250</width>
-    <height>250</height>
+    <height>350</height>
    </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>나눔고딕</family>
+   </font>
   </property>
   <property name="windowTitle">
    <string>로그인</string>
@@ -29,8 +34,8 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
-     <width>221</width>
+     <y>30</y>
+     <width>231</width>
      <height>121</height>
     </rect>
    </property>
@@ -66,7 +71,7 @@
     </property>
     <property name="font">
      <font>
-      <family>맑은 고딕</family>
+      <family>나눔고딕</family>
       <pointsize>12</pointsize>
      </font>
     </property>
@@ -85,7 +90,7 @@
     </property>
     <property name="font">
      <font>
-      <family>맑은 고딕</family>
+      <family>나눔고딕</family>
       <pointsize>12</pointsize>
      </font>
     </property>
@@ -96,22 +101,22 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtID">
+   <widget class="QLineEdit" name="lblID">
     <property name="geometry">
      <rect>
       <x>80</x>
       <y>30</y>
-      <width>131</width>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtPW">
+   <widget class="QLineEdit" name="lblPW">
     <property name="geometry">
      <rect>
       <x>81</x>
       <y>77</y>
-      <width>131</width>
+      <width>141</width>
       <height>20</height>
      </rect>
     </property>
@@ -121,15 +126,15 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>160</y>
+     <y>180</y>
      <width>81</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>맑은 고딕</family>
-     <pointsize>12</pointsize>
+     <family>나눔고딕</family>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
@@ -139,10 +144,10 @@
   <widget class="QPushButton" name="btnID">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>220</y>
+     <x>50</x>
+     <y>290</y>
      <width>75</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -152,10 +157,10 @@
   <widget class="QPushButton" name="btnPW">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>220</y>
+     <x>130</x>
+     <y>290</y>
      <width>75</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
