@@ -71,7 +71,7 @@
 - 쓰레드 사용법
   - GUI와 처리시간이 긴 로직 실행시 반드시 쓰레드 사용
 
-![쓰레드비교](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Thread.png)
+![쓰레드비교](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/ThreadApp.png)
 
 
 - 이메일 보내기 앱
