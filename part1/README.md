@@ -74,8 +74,14 @@
 ![쓰레드비교](https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/Thread.png)
 
 
-
 - 이메일 보내기 앱
-  - 
+
+- PyGame
 
 ## 미니프로젝트 실습
+- 캠퍼스 모바일 학생증 만들기
+
+[팀리포지토리](https://github.com/Tarel-IoT-PK/Campus)
+
+
+
