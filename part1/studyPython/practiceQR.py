@@ -9,17 +9,18 @@ class qtApp(QWidget):
 
     def __init__(self):
         super().__init__()
-        uic.loadUi('C:\Source\Campus\project/studentCard.ui', self) 
+        uic.loadUi('./studyPython/qrcodeApp.ui', self) 
         self.setWindowTitle('QrCode 생성앱 v0.1')
         self.setWindowIcon(QIcon('./studyPython/QRcode.png'))
 
-        img = qrcode.make('안녕안녕')
-        img.save('C:/Source/hello.png')
-        print(type(img))
-        print(img.size)
+    def makeQRcode(self):
+        
+        data = '안녕안녕'
+        qr_img = qrcode.make(data)  # pixmap() 함수생성
+        qr_img.save('./studyPython/Name.png')
 
-        #self.txtQrData.returnPressed.connect(self.btnQrGenClicked)
-
+        img = QPixmap('./studyPython/Name.png')
+        self.lblQrCode.setPixmap(QPixmap(img).scaledToWidth(200))
 
 
 if __name__ == '__main__':

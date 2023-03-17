@@ -76,7 +76,10 @@
 
 - 이메일 보내기 앱
 
-- PyGame
+- 게임만들기 - DinoRun
+  - PyGame
+
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/pygame1.png" width = "450" />
 
 ## 미니프로젝트 실습
 - 캠퍼스 모바일 학생증 만들기
