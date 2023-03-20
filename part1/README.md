@@ -91,7 +91,7 @@
   - PyQt
     - QWebEnginView 추가
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/folium.png" width = "450" />
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/folium.png" width = "700" />
 
 
 
