@@ -93,7 +93,10 @@
 
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/folium.png" width = "700" />
 
+### 계산기 앱
+  - PyQt
 
+  <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/calculator.png" width = "450" />
 
 
 
