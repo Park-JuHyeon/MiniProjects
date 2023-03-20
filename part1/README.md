@@ -95,8 +95,9 @@
 
 ### 계산기 앱
   - PyQt
+  - 16개 signal을 1개의 slot함수로 처리
 
-  <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/calculator.png" width = "450" />
+  <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/calculator.png" width = "300" />
 
 
 
