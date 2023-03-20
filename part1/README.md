@@ -81,6 +81,12 @@
 
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/pygame1.png" width = "450" />
 
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/pygame2.png" width = "450" />
+
+- 게임화면
+
+
+
 ## 미니프로젝트 실습
 - 캠퍼스 모바일 학생증 만들기
 
