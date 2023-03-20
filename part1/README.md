@@ -76,7 +76,7 @@
 
 - 이메일 보내기 앱
 
-- 게임만들기 - DinoRun
+### 게임만들기 - DinoRun
   - PyGame
 
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/pygame1.png" width = "450" />
@@ -84,6 +84,16 @@
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/pygame2.png" width = "450" />
 
 - 게임화면
+
+### 전국대학교 위치맵
+  - Pandas
+  - folium
+  - PyQt
+    - QWebEnginView 추가
+
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/folium.png" width = "450" />
+
+
 
 
 
