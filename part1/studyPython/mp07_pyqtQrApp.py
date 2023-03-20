@@ -33,8 +33,4 @@ class qtApp(QWidget):
             img = QPixmap('./studyPython/site.png')
             self.lblQrCode.setPixmap(QPixmap(img).scaledToWidth(300))
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    ex = qtApp() 
-    ex.show()
-    sys.exit(app.exec_())
+  
