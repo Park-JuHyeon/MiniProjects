@@ -51,7 +51,7 @@
             <TextBlock Grid.Row="2" Grid.Column="1" x:Name="TxbConnstring" Text="MySQL 연결문자열" 
                        FontSize="14" VerticalAlignment="Center" Margin="10"/>
             <ToggleButton Grid.Row="3" Grid.Column="1" x:Name="BtnConnDB" Content="Connect"
-                          Width="100" HorizontalAlignment="Left" Margin="10,5"
+                          Width="150" HorizontalAlignment="Left" Margin="10,5"
                           Style="{StaticResource MahApps.Styles.ToggleButton.Flat}" Click="BtnConnDB_Click" />
             <TextBox Grid.Row="4" Grid.Column="1" x:Name="TxtLog" Margin="10,5" 
                      TextWrapping="Wrap" ScrollViewer.VerticalScrollBarVisibility="Visible"

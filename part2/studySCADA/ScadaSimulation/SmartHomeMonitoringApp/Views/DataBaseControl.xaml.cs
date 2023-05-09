@@ -59,12 +59,13 @@ namespace SmartHomeMonitoringApp.Views
                         UpdateLog(">>> MQTT Broker Connected");
 
                         BtnConnDB.IsChecked = true;
+                        BtnConnDB.Content = "MQTT 연결중";
                         IsConnected = true;     // 예외발생시 true로 변경할 필요 없음
                     }
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    
                     
                 }
             }

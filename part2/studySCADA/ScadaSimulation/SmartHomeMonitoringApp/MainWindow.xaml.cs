@@ -1,20 +1,12 @@
 ﻿using MahApps.Metro.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Diagnostics;
 using SmartHomeMonitoringApp.Views;
+using MahApps.Metro.Controls.Dialogs;
+using SmartHomeMonitoringApp.Logics;
+using System.ComponentModel;
+using System.Web.UI;
 
 namespace SmartHomeMonitoringApp
 {
@@ -53,7 +45,46 @@ namespace SmartHomeMonitoringApp
             if (result == true)
             {
                 ActiveItem.Content = new Views.DataBaseControl();
+                //StsSelScreen.Content = UserControl;
+                StsSelScreen.Content = "DataBase Monitoring";
+
             }
+        }
+
+        private async void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // e.Cancel을 true 하고 시작
+            e.Cancel = true;
+
+            var mySettings = new MetroDialogSettings()
+            {
+                AffirmativeButtonText = "끝내기",
+                NegativeButtonText = "취소",
+                AnimateShow = true,
+                AnimateHide = true,
+            };
+
+            var result = await this.ShowMessageAsync("프로그램 끝내기","프로그램을 끝내시겠습니까?",
+                                                      MessageDialogStyle.AffirmativeAndNegative, mySettings);
+
+            if (result == MessageDialogResult.Negative)
+            {
+                e.Cancel = true;
+            }
+            else if (result == MessageDialogResult.Affirmative)
+            {
+                if (Commons.MQTT_CLIENT != null && Commons.MQTT_CLIENT.IsConnected)
+                {
+                    Commons.MQTT_CLIENT.Disconnect();
+                }
+                Process.GetCurrentProcess().Kill();     // 가장 확실
+            }
+        }
+
+        private void BtnExitProgram_Click(object sender, RoutedEventArgs e)
+        {
+            // 확인메시지 윈도우 클로징 이벤트핸들러
+            this.MetroWindow_Closing(sender, new CancelEventArgs());
         }
     }
 }
