@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using uPLibrary.Networking.M2Mqtt.Messages;
@@ -18,6 +19,8 @@ namespace SmartHomeMonitoringApp.Views
     public partial class DataBaseControl : UserControl
     {
         public bool IsConnected { get; set; }
+
+        Thread MqttThread { get; set; } 
 
         public DataBaseControl()
         {
@@ -33,14 +36,30 @@ namespace SmartHomeMonitoringApp.Views
 
             IsConnected = false;    // 아직 접속이 안되었음
             BtnConnDB.IsChecked = false;
+
+            if (Commons.MQTT_CLIENT != null && Commons.MQTT_CLIENT.IsConnected)
+            {
+                IsConnected = true;
+                BtnConnDB.IsChecked = true;
+                Commons.MQTT_CLIENT.MqttMsgPublishReceived += MQTT_CLIENT_MqttMsgPublishReceived1;
+            }
+        }
+
+        private void MQTT_CLIENT_MqttMsgPublishReceived1(object sender, MqttMsgPublishEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         // 토글버튼 클릭(1 : 접속/ 2: 접속끊기 ) 이벤트 핸들러
         private void BtnConnDB_Click(object sender, RoutedEventArgs e)
         {
+            ConnectDB();
+        }
+
+        private void ConnectDB()
+        {
             if (IsConnected == false)
             {
-               
 
                 // Mqtt 브로커 생성
                 Commons.MQTT_CLIENT = new uPLibrary.Networking.M2Mqtt.MqttClient(Commons.BROKERHOST);
@@ -65,14 +84,29 @@ namespace SmartHomeMonitoringApp.Views
                 }
                 catch (Exception ex)
                 {
-                    
-                    
+                    UpdateLog($"MQTT 에러 발생 : {ex.Message}");
                 }
             }
             else
             {
-                BtnConnDB.IsChecked = false;
-                IsConnected = false;
+                try
+                {
+                    if (Commons.MQTT_CLIENT.IsConnected)
+                    {   // 델리게이트체인 디스커넥트 연결할때는 + // 끊을때는 -
+                        Commons.MQTT_CLIENT.MqttMsgPublishReceived -= MQTT_CLIENT_MqttMsgPublishReceived;
+                        Commons.MQTT_CLIENT.Disconnect();
+                        UpdateLog(">>> MQTT Broker Disconnected...");
+
+                        BtnConnDB.IsEnabled = false;
+                        BtnConnDB.Content = "MQTT 연결종료";
+                        IsConnected = false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    UpdateLog($"!!! MQTT Erorr 발생 : {ex.Message}");
+                }
+
             }
         }
 
@@ -112,7 +146,18 @@ namespace SmartHomeMonitoringApp.Views
                         {
                             conn.Open();
                         }
-                        string insQuery = "INSERT INTO smarthomesensor...";
+                        string insQuery = @"INSERT INTO smarthomesensor
+                                             (Home_Id,
+                                             Room_Name,
+                                             Sensing_DateTime,
+                                             Temp,
+                                             Humid)
+                                            VALUES
+                                             (@Home_Id,
+                                             @Room_Name,
+                                             @Sensing_DateTime,
+                                             @Temp,
+                                             @Humid)";
 
                         MySqlCommand cmd = new MySqlCommand(insQuery, conn);
                         cmd.Parameters.AddWithValue("@Home_Id", currValue["Home_Id"]);
