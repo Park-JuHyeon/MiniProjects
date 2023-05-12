@@ -24,7 +24,7 @@ namespace SmartHomeMonitoringApp.Views
 
         // MQTT Subscribtion text 과도문제 속도저하를 잡기위해 변수
         // 23.05.11 09:30 Pjh
-        int MaxCount { get; set; } = 10;
+        int MaxCount { get; set; } = 50;
 
         public DataBaseControl()
         {
@@ -123,7 +123,7 @@ namespace SmartHomeMonitoringApp.Views
                     TxtLog.Text = string.Empty;
                     TxtLog.Text += ">>> 문서건수가 많아져서 초기화!\n";
                     TxtLog.ScrollToEnd();
-                    MaxCount = 10;      // 테스트시에는 10 운영시는 50
+                    MaxCount = 50;      // 테스트시에는 10 운영시는 50
                 }
 
                 TxtLog.Text += $"{msg}\n";

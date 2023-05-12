@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using MySqlX.XDevAPI.Common;
 using SmartHomeMonitoringApp.Logics;
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,7 @@ namespace SmartHomeMonitoringApp.Views
             Commons.BROKERHOST = TxtBrokerIp.Text;
             Commons.MQTTTOPIC = TxtTopic.Text;
 
-            var userControl = new Views.DataBaseControl();
-            //ActiveItem.Content = userControl;
+           
 
             this.DialogResult = true;   // 
             this.Close();

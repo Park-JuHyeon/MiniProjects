@@ -1,7 +1,7 @@
-﻿using LiveCharts;
-using LiveCharts.Wpf;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using OxyPlot;
+using OxyPlot.Legends;
+using OxyPlot.Series;
 using SmartHomeMonitoringApp.Logics;
 using SmartHomeMonitoringApp.Models;
 using System;
@@ -144,20 +144,55 @@ namespace SmartHomeMonitoringApp.Views
                 await Commons.ShowCustomMessageAsync("DB검색", $"DB검색 오류 {ex.Message}");
                
             }
-            
+
+            var tmp = new PlotModel { Title = $"{CboRoomName.SelectedValue} ROOM" };
+            var legend = new Legend
+            {
+                LegendBorder = OxyColors.DarkGray,
+                LegendBackground = OxyColor.FromArgb(150, 255, 255, 255),
+                LegendPosition = LegendPosition.TopRight,
+                LegendPlacement = LegendPlacement.Outside,
+            };
+
+            tmp.Legends.Add(legend);    // 범례추가
+
+            var tempSeries = new LineSeries
+            {
+                Title = "Temperature",
+                MarkerType = MarkerType.Circle,
+                Color = OxyColors.DarkOrange        // 라인색상 온도는 주황색
+
+            };
+
+            var humidSeries = new LineSeries
+            {
+                Title = "Humidity(%)",
+                MarkerType = MarkerType.Square,
+                Color = OxyColors.Aqua      // 습도는 물색
+            };
+
             // DB에서 가져온 데이터 차트에 뿌리도록 처리
             if (ds.Tables[0].Rows.Count > 0)
             {
+                TotalDataCount = ds.Tables[0].Rows.Count;
+                // Create the plot model    // 선택한 방의 이름이 타이틀로 나오도록
+                
+                var count = 0;
+
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
-                    Convert.ToDouble(row["Temp"]);
+                    tempSeries.Points.Add(new DataPoint(count++, Convert.ToDouble(row["Temp"])));
+                    humidSeries.Points.Add(new DataPoint(count++, Convert.ToDouble(row["Humid"])));
                 }
-
-                
-
-                
             }
 
+            // Add the series to the plot model
+            tmp.Series.Add(tempSeries);
+            tmp.Series.Add(humidSeries);
+
+            OpvSmartHome.Model = tmp;
+
+            LblTotalCount.Content = $"검색데이터 {TotalDataCount}개";
         }
     }
 }
