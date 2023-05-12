@@ -19,16 +19,16 @@
 	
 - 실시간 데이터 가져오기 앱
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/
-smarthome_publisher.gif" width = "450" />
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/smarthome_publisher.gif"
+ width = "450" />
 
 - 스마트홈 모니터링 앱
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/
-smarthome_monitor1.gif" width = "450" />
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/smarthome_monitor1.gif"
+ width = "450" />
 
-<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/
-smarthome_monitor2.png" width = "450" />
+<img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/smarthome_monitor2.png"
+ width = "450" />
 
 
 
