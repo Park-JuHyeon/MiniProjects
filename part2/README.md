@@ -27,6 +27,7 @@
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/smarthome_monitor1.gif"
  width = "450" />
 
+- 모니터링 OxyChart
 <img src="https://raw.githubusercontent.com/Park-JuHyeon/MiniProjects/main/images/smarthome_monitor2.png"
  width = "450" />
 
