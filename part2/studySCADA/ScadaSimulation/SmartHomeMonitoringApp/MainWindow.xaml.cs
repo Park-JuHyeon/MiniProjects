@@ -8,7 +8,6 @@ using SmartHomeMonitoringApp.Logics;
 using System.ComponentModel;
 using System.Web.UI;
 using ControlzEx.Theming;
-using System.Web.UI.WebControls;
 using System.Windows.Controls;
 
 namespace SmartHomeMonitoringApp
@@ -140,8 +139,8 @@ namespace SmartHomeMonitoringApp
                     DefaultThme = "Light";
                     break;
                 case "Dark":
-                    MnuLightTheme.IsChecked = true;
-                    MnuDarkTheme.IsChecked= false;
+                    MnuLightTheme.IsChecked = false;
+                    MnuDarkTheme.IsChecked= true;
                     DefaultThme = "Dark";
                     break;
 
