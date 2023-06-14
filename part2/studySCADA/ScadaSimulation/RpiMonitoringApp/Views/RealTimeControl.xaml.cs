@@ -1,5 +1,6 @@
 ﻿using MahApps.Metro.Controls;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SmartHomeMonitoringApp.Logics;
 using System;
 using System.Collections.Generic;
@@ -61,14 +62,14 @@ namespace SmartHomeMonitoringApp.Views
             Debug.WriteLine(msg);
             var currSensor = JsonConvert.DeserializeObject<Dictionary<string, string>>(msg);
 
-            if (currSensor["DEV_Id"] == "IOT59")    // D101H703은 사용자DB에서 동적으로 가져와야할 값
+            if (currSensor["DEV_ID"] == "IOT59")    // D101H703은 사용자DB에서 동적으로 가져와야할 값
             {
                 this.Invoke(() =>
                 {
                     var dfValue = DateTime.Parse(currSensor["CURR_DT"]).ToString("yyyy-MM-dd HH:mm:ss");
                     LblSensingDt.Content = $"Sensing DateTime : {dfValue}";
                 });
-                switch ("LIVING".ToUpper())     // RoomName을 안받아서 LIVING 으로 고정가능
+                switch ("LIVING".ToUpper())
                 {
                     case "LIVING":
                         this.Invoke(() => 
@@ -77,8 +78,8 @@ namespace SmartHomeMonitoringApp.Views
                             var temp = tmp[0].Trim();   // trim()으로 공백을 반드시 제거해야함
                             var humid = tmp[1].Trim();
 
-                            LvcLivingTemp.Value = Math.Round(Convert.ToDouble(currSensor[temp]), 1);
-                            LvcLivingHumid.Value = Convert.ToDouble(currSensor[humid]);
+                            LvcLivingTemp.Value = Math.Round(Convert.ToDouble(temp), 1);
+                            LvcLivingHumid.Value = Convert.ToDouble(humid);
                         });
                        
                         break;
@@ -112,6 +113,37 @@ namespace SmartHomeMonitoringApp.Views
 
                 }
             }
+        }
+
+        private void BtnOpen_Click(object sender, RoutedEventArgs e)
+        {
+            // JSON으로 서보모터를 90도 오픈한다는 데이터 생성
+            var topic = "pknu/monitor/control/";
+
+            JObject origin_data = new JObject();
+            origin_data.Add("DEV_ID", "MONITOR");
+            origin_data.Add("CURR_DT", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            origin_data.Add("STAT", "OPEN");
+            string pub_data = JsonConvert.SerializeObject(origin_data, Formatting.Indented);    // 줄맞춰주기
+
+            Commons.MQTT_CLIENT.Publish(topic, Encoding.UTF8.GetBytes(pub_data));
+            LblDoorStat.Content = "OPEN!!";
+        }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+            // JSON으로 서보모터를 90도 오픈한다는 데이터 생성
+            var topic = "pknu/monitor/control/";
+
+            JObject origin_data = new JObject();
+            origin_data.Add("DEV_ID", "MONITOR");
+            origin_data.Add("CURR_DT", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            origin_data.Add("STAT", "CLOSE");
+            string pub_data = JsonConvert.SerializeObject(origin_data, Formatting.Indented);    // 줄맞춰주기
+
+            Commons.MQTT_CLIENT.Publish(topic, Encoding.UTF8.GetBytes(pub_data));
+            LblDoorStat.Content = "CLOSE!!";
+
         }
     }
 }
